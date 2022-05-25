@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de pedidos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;400;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <div class="input-bienvenida">
+        <input type="text" class="inputTexto"  placeholder="Seleccione su nombre" aria-label="Recipient's username" id="nombre">
+        <button class="btn btn-bienvenida" type="button" id="button-bienvenida">Comenzar</button>
+      </div>
+        <h3 class="fonts" id="bienvenida"></h3>
+        
+    <div class="list roundBorder">
+        <div class="date">
+            <div class="dateRight">
+                <div id="dia"></div>
+                <div>
+                    <div id="mes"></div>
+                    <div id="anio"></div>
+                </div>
+            </div>
+            <div id="texto"></div>
+        </div>
+        <form onsubmit="addNewTask(event)" >
+            <input type="text" name="taskText" autocomplete="off" placeholder="Nuevo pedido" class="roundBorder">
+            <button type="submit" class="addTaskButton">➕</button>
+            <input type="text" id="textoIngresado" name="Search" autocomplete="off" placeholder="buscar" class="roundBorder">
+            <button type="submit" class="searchTaskButton" id="buscar">🔍</button>
+            <button type="button" class="orderButton roundBorder" onclick="renderOrderedTasks()">Ordenar</button>
+            <button  id="Cargar" class="cargarTaskButton">Cargar</button>
+        </form>
+        <div id="tasksContainer"></div>
+    </div>
+    <script src="index.js" type="text/javascript" defer></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>
